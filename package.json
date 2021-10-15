@@ -1,0 +1,24 @@
+{
+  "name": "e-commerce_licores_proyecto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarenAmor/E-Commer_Licores.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarenAmor/E-Commer_Licores/issues"
+  },
+  "homepage": "https://github.com/KarenAmor/E-Commer_Licores#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13"
+  }
+}
