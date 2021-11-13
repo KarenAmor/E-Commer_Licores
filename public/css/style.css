@@ -7,7 +7,6 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 html, body{
     height:100%;
     width: 100%;
-    height: 100%;
     overflow-x: hidden;
 }
 img{
@@ -28,6 +27,8 @@ header{
     text-transform: uppercase;
     color: #6cc091;
     font-weight: 200;
+    height: 90px;
+    width: 180px;
 }
 .menu a{
     color: #fff;
@@ -59,7 +60,7 @@ header{
 /* BANNER */
 #banner{
     padding: 0 50px;
-    background-image: url(https://image.shutterstock.com/image-photo/vavrisovo-slovakia-september-14-2019-260nw-1504987256.jpg);
+    background-image: url(/img/banner1.jpg);
     height: 45vh;
     background-size: cover;
     background-position: center;
@@ -117,6 +118,7 @@ header{
     position: relative;
     width: 800px;
     height: 300px;
+    left: 70px;
   }
   
   ul.slider li {
@@ -133,7 +135,7 @@ header{
     width: 100%;
     height: 300px;
     object-fit: cover;
-    min-width: 1000px;
+    /* min-width: 1000px; */
     
   }
   
@@ -192,7 +194,7 @@ header{
     padding-right: 0px;
     justify-content: space-around;
     text-align: left;
-    margin-top: 15px;
+    /* margin-top: 15px; */
             }
             
   
@@ -228,4 +230,97 @@ header{
     #check:checked ~ .menu{
         right: 0;
     }
+}
+/* Contenedor general de productos */
+.items{
+    background-color: #4d4d5c;
+    background-size: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;  
+}
+/* Contenedor individual de productos */
+.productos{
+    /* position: relative; */
+    /* bottom: 10px; */
+    background-color: black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: transparent;
+    border-radius: 20px;
+    margin: 0;
+    height: 250px;
+    width: 180px;
+    margin: 20px;
+    margin-left: 45px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    object-fit: cover;
+}
+
+/* Título de productos */
+.descripcion{
+    color: white;
+    height:30px;
+    margin: 0;
+    padding:0;
+}
+/* Precio */
+.precio{
+    color: greenyellow;
+    height:30px;
+    margin: 0;
+    padding:0;
+    font-size: 12px;
+}
+/* Imagen de productos */
+.imagenProducto{
+    height: 150px;
+    width: 150px;
+}
+
+/* Sobre nosotros */
+
+.sobreNosotros{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/liquor2.jpg);
+}
+
+.logo2{
+    height: 400px;
+    width: 400px;
+}
+
+.textoLogo2{
+    padding-left: 40px;
+    height: 200px;
+    width: 300px;
+    color: white;
+    
+}
+
+/* CARRITO DE COMPRAS */
+
+.addToCart{
+    position: relative;
+    bottom: 5px;
+    font-size: 10px;
+    height: 20px;
+    width: 100px;
+    border: transparent;
+    background-color: yellowgreen;
+    border-radius: 5px;   
+}
+
+.addToCart:hover{
+    background: orange;
+    color: white;
 }

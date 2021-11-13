@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Bienvenidxs a Licores para Mundo</title>
+    <title>Bienvenidxs a Licores para el Mundo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -15,7 +15,8 @@
 <body>
 
     <header>
-        <h2 class="logo">Licores Para el Mundo</h2>
+        <!-- <h2 class="logo">Licores Para el Mundo</h2> -->
+        <img src="/img/Licoresparaelmundo3.png" class="logo">
         <input type="checkbox" id="check">
         <label for="check" class="mostrar-menu">
             &#8801
@@ -25,8 +26,8 @@
         <nav class="menu">
             <a href="#">Ingresa <i class="fas fa-sign-in-alt"></i></a>
             <a href="#">Inicio</a>
-            <a href="#">Comprar<i class="fas fa-shopping-basket"></i></a>
-            <a href="#">Categorias</a>
+            <a href="#items">Comprar<i class="fas fa-shopping-basket"></i></a>
+            <a href="#sobreNosotros">Sobre nosotros</a>
             <label for="check" class="esconder-menu">
                 &#215
             </label>
@@ -65,8 +66,27 @@
         </ul>
         
       </div>
+      <div id="items" class="items">
+      </div>
+    
+      <div id="sobreNosotros" class="sobreNosotros">
+          <img src="/img/Licoresparaelmundo2.png" class="logo2">
+          <p class="textoLogo2">TextoTextoTextoTextoTextoTextoTextoTexto
+                                TextoTextoTextoTextoTextoTextoTextoTexto
+                                TextoTextoTextoTextoTextoTextoTextoTexto
+                                TextoTextoTextoTextoTextoTextoTextoTexto
+                                TextoTextoTextoTextoTextoTextoTextoTexto
+                                TextoTextoTextoTextoTextoTextoTextoTexto
+                                TextoTextoTextoTextoTextoTextoTextoTexto
+                                TextoTextoTextoTextoTextoTextoTextoTexto
+                                TextoTextoTextoTextoTextoTextoTextoTexto
+                                TextoTextoTextoTextoTextoTextoTextoTexto
+          </p>
 
-   
+      </div>
+      <!-- CARRITO DE COMPRAS -->
+
+      
 
 
 
@@ -89,7 +109,7 @@
             <br>
             <nav>
                 <ul type="none">
-                    <li><a href="#" class="letra2">Preguntas frequentes</a></li>
+                    <li><a href="#" class="letra2">Preguntas frecuentes</a></li>
                     <li><a href="#" class="letra2">Escríbenos</a></li>
                 </ul>
             </nav>
@@ -111,6 +131,7 @@
     
     </footer>
     
+    <script src="/compras.js"></script>
 </body>
 
 </html>
