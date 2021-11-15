@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceder</title>
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+
+<!--Login código-->
+<div class="container-inicio-registro">
+
+    <div class="container-login">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="elegir"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Iniciar sesión</button>
+                    <button type="button" class="toggle-btn" onclick="registrar()">Registrarse</button>
+            </div>
+            
+                <div class="redes-sociales">
+                    <img src="https://fr.ugtu.net/sites/default/files/fb.png" alt="icono_facebook">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAvVBMVEUtquIAAAD///8ureYur+gAo+AvsesmqOIAouAZpuEvsOsvseotq+L///0urOYupNkfZYUeX38pksEsm8smgq5GsePs9vv2+/wleqKTzesYSWAqj7sQJTAXQVcIAAAia49qveat2O8TOUwNFyEkdJgQLDqg0u3Y7Pa83/F5w+hZt+TG5PKGx+nj8fgmgKjv+PodVnMMERYLDQwJAAsTNEAMHSUKEhgVOlC12/AYQ1oAm90KCAAOGycaTWcbV2//cFSmAAANnklEQVR4nN2daXfiuBKG7cg7JgazhZCwhbBDCLe7J5mZ7v//s65sNgO2VNqMmffLnNNzsP1EUqmqJJU0XbW6L69/KqN1J6wFgbZTENTCznpU2by+dJW/X1P47O6w+tQJLMsy0CNCvpaUjxAyjJJlBeFTdaiSUxXhsLIOShgNaTRhUsxZrwwVfYkKwr96oYHhqGznnJYR9lRQyibc/ukgVroTpYfqm63kL5JK+FYJLeORi+5IaXhh5U3mR8kj7FZrFmDY0eUbpVr1f9K+Sxbhc8fzZOAdITvPkr5MCuG2F5Tk4e2ErKD3KePjJBC+1z1DMt5OhlX/UQDC79CS3XwnISv8vjHhc03i6EtnrAkOSCFCzOfTP1JQfkmMUYBwWCup54sZrZqAs8NN+LOjcPxdClmdn3kTjnLkixm9Ua6EvzU18wNBPtL4hiMP4a9OKW++WKXOr3wIq1K8Tx4hVM2B8Fd4mwaM5Vshc9zBSrjhjP1kCRkbpYTdeg5TPFm+VVdI+B7kbkJTZATvqgir1q0bcK8Si8FhIFxbtyY7iqWnggm3tSL00IOMmnTCd+22NvRSSIMORiDhc5EacCcP6MTBCAtjY5KyYPYGRNgrjo1JyurJInzybs2SIe9JDmG9qIB4YgTMGnTCejG76E4GHZFKWGhACCKNsOCA2NysxQgLa2ROopkbMmGv+IAYkTxpEAmrRe+iO5GnfhLh830AYkSSA0cgfC+eL5olg+CGZxNub/3ZLLJ5CGvFCpfIQtnxYibh+n76aCQvc1rMIrwTM3qSl2VQMwjf72EiPJeXYW3SCbtBASNeih4DFsL6fQ3CnTKc8FTCzb0Nwp28P1DCX/799dFIvpG2+pZGGIptTbudHkMYYfWGy2eCSvPBrwl/3ZMvcyEfXW8Uuybs3DGhhjp0wt+36KOu65qm7zd8/B/XtgWedB1IXRFK+2qwXNNffk1aD7HKzcV4jim5n3Y1718SjnKe623TH68eLlRezEyX8BvC/9PQ5b6bC8KfOQOa/ckl3k6tcRaH7czapCYu/SQS5mtmzHkGX9yQYzMFxHbmq4cG6aGXxuaccAhx10QMwdlz3Gk2X9yOffPiJ64T/U0ml/98LmtIIKwB3DW3TX4BVO68RQbEmp69yjWX8ZDtk//Gfi2bEJJcs/sPbdJIh8ppP5SphA9Nf09ju2bja/eDFe0vfL52ekYISc24uJv0xRGdLzoeVvmhYUfTpTkfNA//RmnCy0ZMEj5DAvt59JK56Fh0FiDAiHHuNJbTRIdeONSnnzVikhA0CmPrUG6IIToUG3Om8+FaBjz+rBEThN8QQ+ruxkLLF0F0xwyAF5pBXux9pxKGgFFozw5/WIFWxMaKW18gQ47CNMJ3UBMeu5cIIsCIZogyFR5l/UghrEPcGfNo0fgRTbCVudJxosBzB/EdaH1NuAVlSO3E68pzrklDoI9Odi+0XXfZnJPfYm2vCHuQJrTnZ2+c8SCaH7yACzPGM/vTMtXrQL0rwoD8iz3h8vydY3YH7vIRcI0dTKft5kb6pBhcEj6DQnv70sxPmVvR4WzCZsOZL6ernZH6oL/2OOsfCGFhkzu4fPGKcWLkHYWtRfNkgSEOxzGI2hN2YSsx7rU3Wb4KcchPYPFmMlSmeqaRvO4ZYRUW26d+H2wS3svknwuPWoKGhlE9IwQu+Ka04UM0RMCjUcSdOQho3g7O6Y7wDZhCvB6Hh5cCR2PWAxg0gHYZ6y1BWAGmZ+x2xmubc9h7XUJiRjKgZlQShBCnOyacZb55SszxHWSKAjLMwH54ItyC89x+9rvLbVKOk/57kJYsVs37PBJuwFlSh5Q9+lhSh+Oc8HO6ymzpk90RqZiwDl4wdMlxQXPmEL+B0MsBajJ6F6h+JISngd0sU3PQx9Il5eNFCNk9RHQg/Ith2Z4+kFpjP3Nhhd/txi1Iz0BdqjTcE/YYFitMiLlf9DOMjkgbttjjGKO3J4TOFfE3wlqhNWikLZEJuTTshHG6JiJkWm8y6bn4nZqDlHVAEVvKsZjwuCMELccclenWpKi1WOKmTGKKzIcchNFA1OAu217gRjxQjvt2hGlz/PjsQRyEqBITrtkIeazFx+SrPZv7pvk3v1/KRViPCUEZmoQc7q8st5rcaaiHJk/aK4gIgeF9UhKiWHateAhLEeEr8zY9GWEsuyY8hNYrJgQmMJKi+m4qtOAhNKqY8InF0OwtvykeqjPri4cQPWFCFo/Gnc53AZKTP+KYZ5kEezUakyk1mw+TWeypmLl31CXXQlCga10WQxP73a3pDE/hTj9niwpKkl7J0rUXFsJDAFxeTcezGf/cxiO+fcvWi/bKYkrT86W5qMy3i8f61v6wELK43ZJF3UWTLmOjMfndtlgmSUTsOYwdYUUbMfndwvlObhH3I2YLjTS2yAKUxFAizk1KaK2x7be83UDk3GiGOlrIZoVFk9a84jQ0mh9qNbZf3KqbDng3C9Y0xvj3NpETcLNXmgJWwuSeoTzFvQGLlU906YFX0N1eUsSfphEQV+jErcYNCMm72GRLZHcop5p5dlLtFjMG91zBKzffyBC7bDkD4qGYb3wv1knZ5wssO19EEUvKPuMfEPmXWNglcvA6YPVLj4j21Zk6ZRKa7mtayPvT/LLCfFm2nXBswX8ez5zn46J+sG9ROAnHh4yrh+eM7TwMDmf+Yk9Y10YC5QV822yrnxqFZns00ipC52IxY3/agpyz45aYP2NUNPietnPZZrw477qm83fWYV4ZgpzkIhFutFe+8/f27GMxHYzHg6/FSulgFHRJvVe2dYuEZGzYhkgwMPReNI5l/Fg5LWGMBaOKEuP6YVK55BVbomFTwLgGnJQp4eQEVXzLoifFa8BM6/hJ+epHIm8e+ET4xLcXY6ccshnCkW+8F4N9P81BylOnnCtqCVnDaE8UN6HqOFjYzGDCLs++tpNctdlhkahpr3hfG+wAcLqUxohT8RTifm+iiO+tcMqQ0EcP+0uHIlUgTVWuTVm4MgWWN+TY532FqGjOEHXXYhkce/VTEJVsjpKy2HTcqw86qJ4t25cfHn7YMko3Hs9bsG3WT5G5lJw9Fa2dspc1ZD/3lCHXHUtllDATRkKns2viFb5scymvr0op03Q4sM54/pAg2/TbCyktORBJkCaUOH+4lVRzNipX1W+PB2LGVYIvs5O3TZwDlld01nYaYiHHQhZg8hww68EgkhxBD0AaYOyyMZ/Hp8ptCC5JASp5QeUlz+NLKqJvC7tw0sbgZU0F/lRGQrYpvPN7LK8FL+tidIW7qW32RddMy0yn7Wny/jkjFC3raTviaxeMp+0puqxPA6somCHbddviSakPeIUUiK5qDHFna/AsP5cR6HMd3CLoqk4U05H1JF7/S4qnJnUIaqm1vhg9NxvDmfM2f3G5MzHU8AHKu67XRgswGr55kONo89l4Km+7CUdRNIrSau7pPyiNOH1oNVeTyWrVlBzurqQ3II5931MIaekat6FkLbssqSzxmdJrX9LrlzoKTqt9CdWYz1JG/VJ6DVrbbMvsoeWHhYIOqmXXoIWUgrZdiYyYT8327cw6wrBa0O5SzqLaVE37YT1m1oIGXpZnZxbDh6s18NVtbC5l1/OGhom22RDKHk5mpFJLokKEmuwMueFotxcf3qrtQyv08YlYV58liIp9UtYhOWlnF5GSpEfi3QiM91tE2UN4jnQ16Luq8bBK/xIJ2e8oiShPl6hkwU3bc1fkbhW4PModJXz3zEQ7FP3+cjCdrFqJbHC5tZosBu2+7wpej8Mi6j0zwILCKYp2Ysby/QaWH3GZrpsfWyzvN5Xwvu97ujQzqYT3fGeXlnK3XNq9a/d5N2CktKs6U+/Ou9dWhN6dp3/e6+2AKffK/bfusLQ2aTD/oXtIEcM9pCK7+W4nprtk9ff7u8eS7T5gXf9zb1cee6mDkEDIWi/y1kLM93Lf2d3qjxx3q9/iNksBbbMxsgnv6PZxI8PKUAiBqbcCyPomUJAI78UHT7vnGEio9+6ho3o9IgOZUH8qfitaT2QECmHxPVQr3RuFExYdkQpIJ9TrRe6odEAAob4uLqJHB4QQFtfc0IwMmFDvFRPRIk8TLITFnPrJEz0jof5cPItqkFw1dkL9XStWAg5pBGebi1Df1orkwaFadrjES4hnjeIgQmYJDkJ9YxWkp2bmZEQJ9fegCAYHBdAhyE6IXbjb91SAoyZCqP9Bt+2pj4ilh/IQ6p+hJ+8IEbO8MG3xRS4hdnDQrfKMjwbMjREl1D87t3HivA5zA3IS6vpvLf9m9PyrTQgKCXV9VMqX8bF0uU9GNaH+s5OjxUFW51/6J0km1PVhzcqHEXm1If1zFBDimCoPRt+qPdM/RRFhxOipHY+4/YT4hAl1/Tu01DEiKxTkk0CI/fG6Ikbk1Zl8bGWEODruBdI7K/KC3j8yPk4KIdZzxzLkWR3f8DrC3XMvWYS63q2GciB9bF2qUpovljxCrLdKWDLEuisyvLDyJvOjpBJifW7qyOKkxHSoswGnmICSTRhp2AsNizHEQqiEwp6A65IpFYSRhpV64OHGpHMiZFheUK+ooIukijBS96/qUxhYGBSTonMj5ON/MQzPKwXhU/VV4UcoJdzr5XVTGa07YS047AcMglrYWY8qm9cX9a//P/ZnFtCAtYzZAAAAAElFTkSuQmCC" alt="icono_twitter">
+                    <img src="https://www.pinclipart.com/picdir/big/28-288899_free-icons-png-google-plus-logo-2017-clipart.png" alt="icono_google">
+                </div>
+
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="Correo electróncio" required>
+                <input type="password" class="input-field" placeholder="Contraseña" required>
+                <input type="checkbox" class="check-box"><span>Recordar contraseña.</span>
+                <button type="submit" class="submit-btn">Acceder</button>
+            </form>
+
+            <form id="registrar" class="input-group">
+                <input type="text" class="input-field" placeholder="Nombre" required>
+                <input type="email" class="input-field" placeholder="Correo electrónico" required>
+                <input type="password" class="input-field" placeholder="Contraseña" required>
+                <input type="checkbox" class="check-box"><span>Acepto los términos y condiciones.</span>
+                <button type="submit" class="submit-btn">Registrar</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!--Fin Login código-->
+
+    <script>
+//Login//
+        var x = document.getElementById("login");
+        var y = document.getElementById("registrar");
+        var z = document.getElementById("elegir");
+
+            function login(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+            }
+            function registrar(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "120px";
+            }
+            
+//Fin Login//
+
+    </script>
+
+</body>
+</html>
