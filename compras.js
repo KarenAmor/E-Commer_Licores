@@ -22,8 +22,6 @@ let p8 = new Producto("Cerveza", "Andes Origen 1L", "Roja", "$170 ARS", "/img/8.
 let p9 = new Producto("Cerveza", "Corona 330ml", "Rubia", "$150 ARS", "/img/9.png")
 let p10 = new Producto("Cerveza", "Club Colombia 330ml", "Negra", "$670 ARS", "/img/10.png")
 
-console.log(p1)
-
 //Lista de productos
 let productos = [p1,p2,p3,p4,p5,p6,p7,p8,p9,p10]
 
@@ -63,8 +61,6 @@ for(let i = 0; i < productos.length; i++){
     let boton = document.createElement("button")
     boton.innerText = "Añadir al carrito"
     boton.className = "addToCart"
-    contenedor.appendChild(boton)
-
-    
+    contenedor.appendChild(boton)   
 }
 

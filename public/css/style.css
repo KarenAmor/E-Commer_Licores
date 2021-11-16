@@ -4,6 +4,7 @@ padding: 0;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
+
 html, body{
     height:100%;
     width: 100%;
@@ -35,7 +36,7 @@ header{
     text-transform: uppercase;
     text-decoration: none;
     padding: 0 10px;
-    
+
 }
 
 .mostrar-menu,
@@ -107,20 +108,20 @@ header{
     width: 1000px;
     padding: 30px;
   }
-  
+
   ul, li {
       padding: 0;
       margin: 0;
       list-style: none;
   }
-  
+
   ul.slider{
     position: relative;
     width: 800px;
     height: 300px;
     left: 70px;
   }
-  
+
   ul.slider li {
       position: absolute;
       left: 0px;
@@ -136,27 +137,27 @@ header{
     height: 300px;
     object-fit: cover;
     /* min-width: 1000px; */
-    
+
   }
-  
+
   ul.slider li:first-child {
       opacity: 1; /*Mostramos el primer <li>*/
   }
-  
+
   ul.slider li:target {
       opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
   }
-  
+
   .menu{
     text-align: center;
     margin: 20px;
   }
-  
+
   .menu li{
     display: inline-block;
     text-align: center;
   }
-  
+
   .menu li a{
     display: inline-block;
     color: white;
@@ -165,16 +166,16 @@ header{
     padding: 10px;
     width: 20px;
     height: 20px;
-  font-size: 5px;
-  border-radius: 100%;
+    font-size: 5px;
+    border-radius: 100%;
 }
-  
-  
+
+
   .footer p {
     padding: 10px 0px 0px 15px;
     font-size: 16px;
   }
-  
+
   .letra2 {
     color: white;
     text-decoration: none;
@@ -196,8 +197,8 @@ header{
     text-align: left;
     /* margin-top: 15px; */
             }
-            
-  
+
+
 
 /*RESPONSIVE*/
 @media (max-width:768px) {
@@ -241,7 +242,7 @@ header{
     margin: 0;
     padding: 0;
     height: 100vh;
-    width: 100%;  
+    width: 100%;
 }
 /* Contenedor individual de productos */
 .productos{
@@ -304,7 +305,7 @@ header{
     height: 200px;
     width: 300px;
     color: white;
-    
+
 }
 
 /* CARRITO DE COMPRAS */
@@ -317,10 +318,12 @@ header{
     width: 100px;
     border: transparent;
     background-color: yellowgreen;
-    border-radius: 5px;   
+    border-radius: 5px;
 }
 
 .addToCart:hover{
     background: orange;
     color: white;
 }
+
+
