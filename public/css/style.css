@@ -61,7 +61,7 @@ header{
 /* BANNER */
 #banner{
     padding: 0 50px;
-    background-image: url(/img/banner1.jpg);
+    background-image: url(/public/img/banner1.jpg);
     height: 45vh;
     background-size: cover;
     background-position: center;
@@ -292,7 +292,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/img/liquor2.jpg);
+    background-image: url(/public/img/liquor2.jpg);
 }
 
 .logo2{
