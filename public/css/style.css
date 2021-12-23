@@ -1,14 +1,15 @@
 *{
-margin: 0;
-padding: 0;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
 }
 
 html, body{
     height:100%;
     width: 100%;
     overflow-x: hidden;
+    background-color: #4d4d5c;
 }
 img{
     width: 100%;
@@ -23,7 +24,10 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
+
+
 .logo{
     text-transform: uppercase;
     color: #6cc091;
@@ -61,8 +65,8 @@ header{
 /* BANNER */
 #banner{
     padding: 0 50px;
-    background-image: url(/public/img/banner1.jpg);
-    height: 45vh;
+    background-image: url(/E-Commer_Licores/public/img/banner1.jpg);
+    height: 85vh;
     background-size: cover;
     background-position: center;
 }
@@ -89,7 +93,23 @@ header{
     .contenido-banner h3 span{
         font-weight: 400;
     }
-.boton-empezar{
+
+/* DESTACADOS*/
+.contenido-destacados{
+    display: inline-block;
+    background: white;
+    height: 70vh;
+    width: 100%;
+
+}
+
+.contenido-destacados > h3{
+    text-align: center;
+    font-weight: 700;
+    padding: 50px 20px 20px 20px;
+}
+
+/* .boton-empezar{
     text-decoration: none;
     color: #fff;
     border: 1px solid #6cc091;
@@ -99,76 +119,7 @@ header{
 }
 .boton-empezar:hover{
     background: #6cc091;
-}
-
-/*SLIDER*/
-.container{
-    margin: auto;
-    background-color: white;
-    width: 1000px;
-    padding: 30px;
-  }
-
-  ul, li {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-  }
-
-  ul.slider{
-    position: relative;
-    width: 800px;
-    height: 300px;
-    left: 70px;
-  }
-
-  ul.slider li {
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      opacity: 0;
-      width: inherit;
-      height: inherit;
-      transition: opacity .5s;
-      background:#fff;
-  }
-  ul.slider li img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    /* min-width: 1000px; */
-
-  }
-
-  ul.slider li:first-child {
-      opacity: 1; /*Mostramos el primer <li>*/
-  }
-
-  ul.slider li:target {
-      opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
-  }
-
-  .menu{
-    text-align: center;
-    margin: 20px;
-  }
-
-  .menu li{
-    display: inline-block;
-    text-align: center;
-  }
-
-  .menu li a{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    background-color: grey;
-    padding: 10px;
-    width: 20px;
-    height: 20px;
-    font-size: 5px;
-    border-radius: 100%;
-}
+} */
 
 
   .footer p {
@@ -189,6 +140,7 @@ header{
   .footer{
     background-color: black;
     width: 100%;
+    height: 35%;
     display: flex;
     flex-direction: row;
     color: white;
@@ -232,44 +184,117 @@ header{
         right: 0;
     }
 }
+
+
+
+/* TIENDA */
+.containerTienda{
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    height: auto;
+    
+}
+
+.containerTienda > h1{
+    color: white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    margin: 20px 0 40px 0;
+}
+
+.containerTienda > h1:after{
+    content:'';
+    width: 100%;
+    height: 1px;
+    background: #c7C7C7;
+    margin: 20px 0px;
+}
+
+.containerTienda2{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+     
+ }
+
+.tienda{
+    padding: 0;
+    height: 100vh;
+    min-width: 800px;
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #4d4d5c;
+    overflow: hidden;
+
+}
+
+/* CATEGORIAS */
+.category_list{
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+	width: 15%;
+    margin: 20px;
+    background-color: #4d4d5c;
+    position: relative;
+    bottom: 100px;
+}
+
+.category_list .category_item{
+	display: block;
+	width: 100%;
+	padding: 15px 0;
+	margin-bottom: 20px;
+	/* background: #E84C3D; */
+    background: black;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+
+.category_list .ct_item-active{
+	background: #E84C3D;
+}
+
 /* Contenedor general de productos */
 .items{
     background-color: #4d4d5c;
     background-size: 100%;
     display: block;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100%;
+    margin-left: 15px;
+    height: 90vh;
+    width: 85%;
+    overflow: hidden;   
 }
 /* Contenedor individual de productos */
 .productos{
-    /* position: relative; */
-    /* bottom: 10px; */
     background-color: black;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border: transparent;
-    border-radius: 20px;
-    margin: 0;
-    height: 250px;
+    border-radius: 10px;
+    height: 280px;
     width: 180px;
-    margin: 20px;
-    margin-left: 45px;
+    margin: 0px 0px 20px 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     object-fit: cover;
 }
 
 /* Título de productos */
-.descripcion{
+.nombre{
     color: white;
+    text-align: center;
     height:30px;
-    margin: 0;
-    padding:0;
+    margin: 0px 10px 25px 10px;
+    padding: 0px;
 }
 /* Precio */
 .precio{
@@ -292,7 +317,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/public/img/liquor2.jpg);
+    background-image: url(/E-Commer_Licores/public/img/liquor2.jpg);
 }
 
 .logo2{
@@ -309,6 +334,22 @@ header{
 }
 
 /* CARRITO DE COMPRAS */
+.containerCarrito{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    color: white;
+}
+
+.modal-body {
+    color:black;
+    
+}
+.modal-title{
+    color:black;
+}
+
 
 .addToCart{
     position: relative;
@@ -319,11 +360,40 @@ header{
     border: transparent;
     background-color: yellowgreen;
     border-radius: 5px;
+
 }
 
 .addToCart:hover{
     background: orange;
     color: white;
 }
+
+
+.shopping-cart-items {
+    padding: 20px 0px;
+  }
+  
+  .shopping-cart-header {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .shopping-cart-image {
+    max-width: 80px;
+    border-radius: 20px;
+  }
+  
+  .shopping-cart-quantity-input {
+    max-width: 45px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #eee;
+    padding: 5px;
+  }
+  
+  .shopping-cart-total {
+    min-height: 96px;
+  }
+  
+ 
 
 

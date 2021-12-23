@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceder</title>
-    <link rel="stylesheet" href="/public/css/loginstyle.css">
+    <link rel="stylesheet" href="/E-Commer_Licores/public/css/loginstyle.css">
 </head>
 <body>
 
@@ -26,18 +26,18 @@
                     <img src="https://www.pinclipart.com/picdir/big/28-288899_free-icons-png-google-plus-logo-2017-clipart.png" alt="icono_google">
                 </div>
 
-            <form id="login" class="input-group">
-                <input type="text" class="input-field" placeholder="Correo electróncio" required>
-                <input type="password" class="input-field" placeholder="Contraseña" required>
+            <form id="login" class="input-group" action="/E-Commer_Licores/views/index.html">
+                <input type="text" name="email" class="input-field email" placeholder="Correo electrónico" id="txtEmail" required>
+                <input type="password" name="password" class="input-field password" placeholder="Contraseña" id="txtPassword" required>
                 <input type="checkbox" class="check-box"><span>Recordar contraseña.</span>
-                <button type="submit" class="submit-btn">Acceder</button>
+                <button href="/E-Commer_Licores/views/index.html" type="submit" class="submit-btn" id="btnIngresar">Acceder</button>
             </form>
 
             <form id="registrar" class="input-group">
-                <input type="text" class="input-field" placeholder="Nombre" required>
-                <input type="email" class="input-field" placeholder="Correo electrónico" required>
-                <input type="password" class="input-field" placeholder="Contraseña" required>
-                <input type="checkbox" class="check-box"><span>Acepto los términos y condiciones.</span>
+                <input type="text" class="input-field" placeholder="Nombre">
+                <input type="email" class="input-field" placeholder="Correo electrónico">
+                <input type="password" class="input-field" placeholder="Contraseña">
+                <input type="checkbox" class="check-box" required><span>Acepto los <a href="">términos y condiciones.</a> </span>
                 <button type="submit" class="submit-btn">Registrar</button>
             </form>
 
@@ -66,7 +66,47 @@
             
 //Fin Login//
 
+        const form = document.getElementById("registrar")
+
+        form.onsubmit = (event)=>{
+            // event.preventDefault()
+            alert('Gracias por registrarte! Revisa tu correo para activar tu cuenta')
+        } 
+
+
+        //PROMESA 
+
+        const form2 = document.getElementById("login")
+
+        form2.onsubmit = (event)=>{
+            event.preventDefault()
+            console.log(form2.email.value)
+
+            fetch("http://localhost:1337/auth/local", {
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify({
+                    identifier:form2.email.value,
+                    password:form2.password.value
+                })
+            }).then(res=>res.json())
+            .then(data=>{
+                if(data.error){
+                    alert("Fallo")
+                }else{
+                    alert("Exito!")
+                    localStorage.setItem("token", data.jwt)
+                    localStorage.setItem("username", data.user.username)
+                }
+            }).catch(error=>console.log(error))
+        }
+
+      
     </script>
+    <script type="text/javascript" src="/E-Commer_Licores/public/js_files/jquery-3.6.0.min.js"></script>
+    
 
 </body>
 </html>
