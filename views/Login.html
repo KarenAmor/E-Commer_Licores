@@ -34,9 +34,9 @@
             </form>
 
             <form id="registrar" class="input-group">
-                <input type="text" class="input-field" placeholder="Nombre">
-                <input type="email" class="input-field" placeholder="Correo electrónico">
-                <input type="password" class="input-field" placeholder="Contraseña">
+                <input type="text" class="input-field" placeholder="Nombre" min-length="6" required>
+                <input type="email" class="input-field" placeholder="Correo electrónico" required>
+                <input type="password" class="input-field" placeholder="Contraseña" min-length="8" required>
                 <input type="checkbox" class="check-box" required><span>Acepto los <a href="">términos y condiciones.</a> </span>
                 <button type="submit" class="submit-btn">Registrar</button>
             </form>
@@ -100,6 +100,7 @@
                     localStorage.setItem("token", data.jwt)
                     localStorage.setItem("username", data.user.username)
                 }
+                window.location.href= "index.html"
             }).catch(error=>console.log(error))
         }
 
