@@ -23,8 +23,7 @@ header{
     color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 
@@ -284,7 +283,7 @@ header{
     height: 280px;
     width: 180px;
     margin: 0px 0px 20px 20px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow: rgba(255, 255, 255, 0.356) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     object-fit: cover;
 }
 
@@ -320,17 +319,40 @@ header{
     background-image: url(/E-Commer_Licores/public/img/liquor2.jpg);
 }
 
+.sobreNosotros > p{
+    background:rgba(0, 0, 0, 0.8)
+}
+
 .logo2{
     height: 400px;
     width: 400px;
+    padding-right: 20px;
 }
 
 .textoLogo2{
-    padding-left: 40px;
-    height: 200px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
+    margin: 0;
+    padding: 10px 20px 20px 20px;
     color: white;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 17px;
+    border-radius: 5%;
+}
 
+.letra3 {
+    position: relative;
+    top: 140px;
+    right: 265px;
+    padding-left: 30px;
+    color: red;
+    height: 100px;
+    width: 100px;
+}
+
+.letra3:hover{
+    color: white;
 }
 
 /* CARRITO DE COMPRAS */

@@ -110,17 +110,25 @@ function quantityChanged(event){
 function comprarButtonClicked() {
     const total = document.querySelector('.shoppingCartTotal');
     const numeroTotal = Number(total.textContent.replace('$', ''))
-    if(numeroTotal == 0){
-        const target = document.querySelector('.comprarButton')
-        // target.removeAttribute('data-target');
-        target.setAttribute('data-target', '#comprarModal2')
+    const token = localStorage.getItem("token");
+    if(token) {
+        if(numeroTotal == 0){                                               //Acá poner la parte del token.
+            const target = document.querySelector('.comprarButton')
+            // target.removeAttribute('data-target');
+            target.setAttribute('data-target', '#comprarModal2')
+            
+        }else{
+            const target = document.querySelector('.comprarButton')
+            target.setAttribute('data-target','#comprarModal');
+            shoppingCartItemsContainer.innerHTML = '';
+            updateShoppingCartTotal();
+        }    
         
     }else{
-        const target = document.querySelector('.comprarButton')
-        target.setAttribute('data-target','#comprarModal');
-        shoppingCartItemsContainer.innerHTML = '';
-        updateShoppingCartTotal();
+        alert("Primero debes iniciar sesión")
+        window.location.href= "Login.html"
     }
+    
   }
 
 $(document).ready(function(){

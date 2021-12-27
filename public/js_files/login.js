@@ -6,6 +6,7 @@ if(localStorage.getItem("username")){
     button.onclick = ()=>{
         localStorage.removeItem("token")
         localStorage.removeItem("username")
+        window.location.href= "index.html"
     }    
 }else{
     const p = document.getElementById("botonLogin")
